@@ -4,439 +4,270 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Motion-S: Signverse Sign Language Dataset</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: #f5f5f5;
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        
-        header {
-            background-color: #1a1a2e;
-            color: white;
-            padding: 2rem 0;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-        
-        header h1 {
-            font-size: 2rem;
-            margin-bottom: 0.5rem;
-        }
-        
-        header p {
-            opacity: 0.9;
-            font-size: 1.1rem;
-        }
-        
-        nav {
-            background-color: #16213e;
-            padding: 1rem 0;
-            position: fixed;
-            width: 100%;
-            top: 120px;
-            z-index: 999;
-            overflow-x: auto;
-            white-space: nowrap;
-        }
-        
-        nav a {
-            color: white;
-            text-decoration: none;
-            padding: 0.5rem 1rem;
-            margin: 0 0.5rem;
-            border-radius: 4px;
-            transition: background-color 0.3s;
-            display: inline-block;
-        }
-        
-        nav a:hover {
-            background-color: #0f3460;
-        }
-        
-        main {
-            margin-top: 180px;
-            padding: 2rem 0;
-        }
-        
-        section {
-            background-color: white;
-            padding: 2rem;
-            margin-bottom: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-        
-        h2 {
-            color: #1a1a2e;
-            margin-bottom: 1.5rem;
-            padding-bottom: 0.5rem;
-            border-bottom: 2px solid #e94560;
-        }
-        
-        h3 {
-            color: #16213e;
-            margin-top: 1.5rem;
-            margin-bottom: 1rem;
-        }
-        
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 1rem 0;
-        }
-        
-        th, td {
-            padding: 0.75rem;
-            text-align: left;
-            border-bottom: 1px solid #ddd;
-        }
-        
-        th {
-            background-color: #f8f9fa;
-            font-weight: 600;
-            color: #1a1a2e;
-        }
-        
-        tr:hover {
-            background-color: #f8f9fa;
-        }
-        
-        .highlight {
-            background-color: #fff3cd;
-            padding: 1rem;
-            border-left: 4px solid #ffc107;
-            margin: 1rem 0;
-        }
-        
-        .feature-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1rem;
-            margin: 1rem 0;
-        }
-        
-        .feature-card {
-            background-color: #f8f9fa;
-            padding: 1.5rem;
-            border-radius: 8px;
-            border: 1px solid #dee2e6;
-        }
-        
-        .feature-card h4 {
-            color: #e94560;
-            margin-bottom: 0.5rem;
-        }
-        
-        code {
-            background-color: #f8f9fa;
-            padding: 0.2rem 0.4rem;
-            border-radius: 3px;
-            font-family: 'Courier New', monospace;
-            font-size: 0.9em;
-        }
-        
-        pre {
-            background-color: #f8f9fa;
-            padding: 1rem;
-            border-radius: 5px;
-            overflow-x: auto;
-            margin: 1rem 0;
-        }
-        
-        .download-btn {
-            display: inline-block;
-            background-color: #e94560;
-            color: white;
-            padding: 0.75rem 1.5rem;
-            text-decoration: none;
-            border-radius: 5px;
-            margin: 0.5rem 0.5rem 0.5rem 0;
-            transition: background-color 0.3s;
-        }
-        
-        .download-btn:hover {
-            background-color: #c13651;
-        }
-        
-        footer {
-            background-color: #1a1a2e;
-            color: white;
-            text-align: center;
-            padding: 2rem 0;
-            margin-top: 3rem;
-        }
-        
-        .abstract {
-            background-color: #e8f4f8;
-            padding: 1.5rem;
-            border-radius: 8px;
-            margin-bottom: 2rem;
-            border-left: 4px solid #3498db;
-        }
-        
-        @media (max-width: 768px) {
-            nav {
-                top: 100px;
-            }
-            
-            main {
-                margin-top: 160px;
-            }
-            
-            header h1 {
-                font-size: 1.5rem;
-            }
-            
-            table {
-                font-size: 0.9rem;
-            }
-        }
-    </style>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1>Motion-S Dataset</h1>
-            <p>Multiview Open-source Training Infrastructure for Optimized Neurolinguistic Sign</p>
-        </div>
-    </header>
+    <h1>Motion-S Dataset</h1>
+    <p>Multiview Open-source Training Infrastructure for Optimized Neurolinguistic Sign</p>
+    <p>Version 1.0 | Release Date: July 2025 | Author: Anthony Marugu</p>
     
-    <nav>
-        <div class="container">
-            <a href="#overview">Overview</a>
-            <a href="#features">Features</a>
-            <a href="#specifications">Specifications</a>
-            <a href="#structure">Structure</a>
-            <a href="#collection">Collection</a>
-            <a href="#quality">Quality</a>
-            <a href="#access">Access</a>
-            <a href="#contact">Contact</a>
-        </div>
-    </nav>
+    <hr>
     
-    <main class="container">
-        <section id="overview">
-            <h2>Dataset Overview</h2>
-            
-            <div class="abstract">
-                <h3>Abstract</h3>
-                <p>The Motion-S (Multiview Open-source Training Infrastructure for Optimized Neurolinguistic Sign) dataset represents a groundbreaking advancement in sign language technology, offering the first comprehensive multiview Kenyan Sign Language (KSL) corpus designed for next-generation AI applications. This dataset comprises 20,000+ professionally captured sign language sequences recorded using synchronized multi-camera arrays (6-8 cameras), delivering unprecedented 3D spatial coverage and reducing occlusion-related ambiguities common in single-view datasets.</p>
-                
-                <p>Key innovations include: (1) Full 360-degree multiview capture enabling robust 3D pose estimation and avatar generation, (2) Integrated high-fidelity facial expression data with 468 tracked landmarks critical for non-manual markers in KSL, (3) Professional-grade audiovisual quality (1080p minimum, 30-60 fps) with synchronized speech and transcripts, (4) Enhanced BVHX format incorporating both skeletal and facial animation data, and (5) Comprehensive linguistic annotations validated by the Deaf community.</p>
-            </div>
-            
-            <h3>Dataset Composition</h3>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Source Category</th>
-                        <th>Target Volume</th>
-                        <th>Percentage</th>
-                        <th>Quality Level</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Professional Studio Content</td>
-                        <td>16,000 signs</td>
-                        <td>80%</td>
-                        <td>Premium</td>
-                    </tr>
-                    <tr>
-                        <td>Existing Academic Datasets</td>
-                        <td>4,000 signs</td>
-                        <td>20%</td>
-                        <td>High</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Total</strong></td>
-                        <td><strong>20,000 signs</strong></td>
-                        <td><strong>100%</strong></td>
-                        <td><strong>Mixed</strong></td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
-        
-        <section id="features">
-            <h2>Key Features</h2>
-            <div class="feature-grid">
-                <div class="feature-card">
-                    <h4>20,000+ Videos</h4>
-                    <p>High-quality sign language videos with full-body and facial capture</p>
-                </div>
-                <div class="feature-card">
-                    <h4>Multiview Capture</h4>
-                    <p>6-8 synchronized cameras for 360-degree coverage</p>
-                </div>
-                <div class="feature-card">
-                    <h4>3D Pose Estimation</h4>
-                    <p>536 tracked points per frame including body, hands, and face</p>
-                </div>
-                <div class="feature-card">
-                    <h4>Professional Quality</h4>
-                    <p>1080p minimum resolution at 30-60 fps</p>
-                </div>
-                <div class="feature-card">
-                    <h4>BVHX Format</h4>
-                    <p>Enhanced format with integrated facial expression data</p>
-                </div>
-                <div class="feature-card">
-                    <h4>Community Validated</h4>
-                    <p>Annotations verified by the Deaf community</p>
-                </div>
-            </div>
-        </section>
-        
-        <section id="specifications">
-            <h2>Technical Specifications</h2>
-            
-            <h3>Video Requirements</h3>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Parameter</th>
-                        <th>Minimum</th>
-                        <th>Preferred</th>
-                        <th>Maximum</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Resolution</td>
-                        <td>1080p (1920×1080)</td>
-                        <td>4K (3840×2160)</td>
-                        <td>8K</td>
-                    </tr>
-                    <tr>
-                        <td>Frame Rate</td>
-                        <td>30 fps</td>
-                        <td>60 fps</td>
-                        <td>120 fps</td>
-                    </tr>
-                    <tr>
-                        <td>Duration</td>
-                        <td>2 seconds</td>
-                        <td>3-5 seconds</td>
-                        <td>15 seconds</td>
-                    </tr>
-                    <tr>
-                        <td>File Format</td>
-                        <td>MP4 (H.264)</td>
-                        <td>MP4 (H.265)</td>
-                        <td>ProRes</td>
-                    </tr>
-                </tbody>
-            </table>
-            
-            <h3>Multiview Camera Configuration</h3>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Setup Type</th>
-                        <th>Number of Cameras</th>
-                        <th>Use Case</th>
-                        <th>Coverage Angle</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Minimum</td>
-                        <td>2-4 cameras</td>
-                        <td>Basic 3D pose estimation</td>
-                        <td>90°-120° separation</td>
-                    </tr>
-                    <tr>
-                        <td>Standard</td>
-                        <td>6-8 cameras</td>
-                        <td>Robust sign capture</td>
-                        <td>45°-60° separation</td>
-                    </tr>
-                    <tr>
-                        <td>Professional</td>
-                        <td>8-12 cameras</td>
-                        <td>High-accuracy research</td>
-                        <td>30°-45° separation</td>
-                    </tr>
-                </tbody>
-            </table>
-            
-            <h3>3D Pose Estimation Pipeline</h3>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Stage</th>
-                        <th>Process</th>
-                        <th>Output</th>
-                        <th>Quality Metric</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Calibration</td>
-                        <td>Camera parameter estimation</td>
-                        <td>Intrinsic/Extrinsic matrices</td>
-                        <td>Reprojection error &lt;1 pixel</td>
-                    </tr>
-                    <tr>
-                        <td>2D Detection</td>
-                        <td>Pose estimation per view</td>
-                        <td>2D keypoints</td>
-                        <td>Confidence &gt;0.8</td>
-                    </tr>
-                    <tr>
-                        <td>Triangulation</td>
-                        <td>3D pose from multiple views</td>
-                        <td>3D joint positions</td>
-                        <td>Cross-view consistency &gt;95%</td>
-                    </tr>
-                    <tr>
-                        <td>Validation</td>
-                        <td>Multi-view consistency check</td>
-                        <td>Pose quality score</td>
-                        <td>Reprojection error &lt;10 pixels</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
-        
-        <section id="structure">
-            <h2>Data Structure & Format</h2>
-            
-            <h3>File Naming Convention</h3>
-            <pre><code>[LANGUAGE]_[CATEGORY]_[SIGN_ID]_[SIGNER_ID]_[VARIANT].[EXTENSION]</code></pre>
-            
-            <p>Examples:</p>
-            <ul>
-                <li><code>KSL_WORD_HELLO_S001_V1.mp4</code></li>
-                <li><code>KSL_PHRASE_HOWAREYOU_S025_V2.bvhx</code></li>
-                <li><code>KSL_EMOTION_HAPPY_S150_V1.json</code></li>
-            </ul>
-            
-            <h3>Directory Structure</h3>
-            <pre>
+    <h2>Navigation</h2>
+    <ul>
+        <li><a href="#overview">Dataset Overview</a></li>
+        <li><a href="#features">Key Features</a></li>
+        <li><a href="#specifications">Technical Specifications</a></li>
+        <li><a href="#structure">Data Structure & Format</a></li>
+        <li><a href="#collection">Data Collection Protocols</a></li>
+        <li><a href="#quality">Quality Assurance Standards</a></li>
+        <li><a href="#access">Distribution & Access</a></li>
+        <li><a href="#contact">Contact Information</a></li>
+    </ul>
+    
+    <hr>
+    
+    <h2 id="overview">Dataset Overview</h2>
+    
+    <h3>Abstract</h3>
+    <p>The Motion-S (Multiview Open-source Training Infrastructure for Optimized Neurolinguistic Sign) dataset represents a groundbreaking advancement in sign language technology, offering the first comprehensive multiview Kenyan Sign Language (KSL) corpus designed for next-generation AI applications. This dataset comprises 20,000+ professionally captured sign language sequences recorded using synchronized multi-camera arrays (6-8 cameras), delivering unprecedented 3D spatial coverage and reducing occlusion-related ambiguities common in single-view datasets.</p>
+    
+    <p>Key innovations include: (1) Full 360-degree multiview capture enabling robust 3D pose estimation and avatar generation, (2) Integrated high-fidelity facial expression data with 468 tracked landmarks critical for non-manual markers in KSL, (3) Professional-grade audiovisual quality (1080p minimum, 30-60 fps) with synchronized speech and transcripts, (4) Enhanced BVHX format incorporating both skeletal and facial animation data, and (5) Comprehensive linguistic annotations validated by the Deaf community.</p>
+    
+    <p>Motion-S addresses critical gaps in African sign language resources, providing researchers, developers, and educators with a versatile dataset suitable for sign language recognition, translation, avatar animation, and linguistic research. By combining 80% professional studio recordings with 20% curated academic content, Motion-S ensures both technical excellence and linguistic authenticity, setting new standards for sign language dataset development while promoting technological advancement for the Kenyan Deaf community.</p>
+    
+    <h3>Dataset Composition</h3>
+    <table border="1">
+        <tr>
+            <th>Source Category</th>
+            <th>Target Volume</th>
+            <th>Percentage</th>
+            <th>Quality Level</th>
+        </tr>
+        <tr>
+            <td>Professional Studio Content</td>
+            <td>16,000 signs</td>
+            <td>80%</td>
+            <td>Premium</td>
+        </tr>
+        <tr>
+            <td>Existing Academic Datasets</td>
+            <td>4,000 signs</td>
+            <td>20%</td>
+            <td>High</td>
+        </tr>
+        <tr>
+            <td><strong>Total</strong></td>
+            <td><strong>20,000 signs</strong></td>
+            <td><strong>100%</strong></td>
+            <td><strong>Mixed</strong></td>
+        </tr>
+    </table>
+    
+    <hr>
+    
+    <h2 id="features">Key Features</h2>
+    <ul>
+        <li><strong>20,000+ Videos</strong>: High-quality sign language videos with full-body and facial capture</li>
+        <li><strong>Multiview Capture</strong>: 6-8 synchronized cameras for 360-degree coverage</li>
+        <li><strong>3D Pose Estimation</strong>: 536 tracked points per frame including body, hands, and face</li>
+        <li><strong>Professional Quality</strong>: 1080p minimum resolution at 30-60 fps</li>
+        <li><strong>BVHX Format</strong>: Enhanced format with integrated facial expression data</li>
+        <li><strong>Community Validated</strong>: Annotations verified by the Deaf community</li>
+    </ul>
+    
+    <hr>
+    
+    <h2 id="specifications">Technical Specifications</h2>
+    
+    <h3>Video Requirements</h3>
+    <table border="1">
+        <tr>
+            <th>Parameter</th>
+            <th>Minimum</th>
+            <th>Preferred</th>
+            <th>Maximum</th>
+        </tr>
+        <tr>
+            <td>Resolution</td>
+            <td>1080p (1920×1080)</td>
+            <td>4K (3840×2160)</td>
+            <td>8K</td>
+        </tr>
+        <tr>
+            <td>Frame Rate</td>
+            <td>30 fps</td>
+            <td>60 fps</td>
+            <td>120 fps</td>
+        </tr>
+        <tr>
+            <td>Duration</td>
+            <td>2 seconds</td>
+            <td>3-5 seconds</td>
+            <td>15 seconds</td>
+        </tr>
+        <tr>
+            <td>File Format</td>
+            <td>MP4 (H.264)</td>
+            <td>MP4 (H.265)</td>
+            <td>ProRes</td>
+        </tr>
+        <tr>
+            <td>Bitrate</td>
+            <td>5 Mbps</td>
+            <td>15 Mbps</td>
+            <td>50 Mbps</td>
+        </tr>
+    </table>
+    
+    <h3>Multiview Camera Configuration</h3>
+    <table border="1">
+        <tr>
+            <th>Camera Configuration</th>
+            <th>Number of Cameras</th>
+            <th>Use Case</th>
+            <th>Coverage Angle</th>
+            <th>Optimal Distance</th>
+        </tr>
+        <tr>
+            <td><strong>Minimum Setup</strong></td>
+            <td>2-4 cameras</td>
+            <td>Basic 3D pose estimation in controlled environments</td>
+            <td>90° separation (stereo) or 120° (3 cameras)</td>
+            <td>2-3 meters</td>
+        </tr>
+        <tr>
+            <td><strong>Standard Setup</strong></td>
+            <td>6-8 cameras</td>
+            <td>Robust sign capture with occlusion handling</td>
+            <td>45-60° separation in semicircle</td>
+            <td>2.5-4 meters</td>
+        </tr>
+        <tr>
+            <td><strong>Professional Setup</strong></td>
+            <td>8-12 cameras</td>
+            <td>High-accuracy capture for complex signs and research</td>
+            <td>30-45° separation, full circle</td>
+            <td>3-5 meters</td>
+        </tr>
+    </table>
+    
+    <h3>Camera Placement Specifications</h3>
+    <table border="1">
+        <tr>
+            <th>Position</th>
+            <th>Height</th>
+            <th>Angle</th>
+            <th>Purpose</th>
+        </tr>
+        <tr>
+            <td>Front Center</td>
+            <td>Eye level (1.6m)</td>
+            <td>0°</td>
+            <td>Primary frontal view, facial expressions</td>
+        </tr>
+        <tr>
+            <td>Front Left/Right</td>
+            <td>Eye level (1.6m)</td>
+            <td>±45°</td>
+            <td>Hand shape disambiguation</td>
+        </tr>
+        <tr>
+            <td>Side Left/Right</td>
+            <td>Shoulder level (1.4m)</td>
+            <td>±90°</td>
+            <td>Profile movements, depth perception</td>
+        </tr>
+        <tr>
+            <td>Rear Left/Right</td>
+            <td>Above head (2.0m)</td>
+            <td>±135°</td>
+            <td>Back hand positions, body posture</td>
+        </tr>
+        <tr>
+            <td>Optional Top</td>
+            <td>2.5-3m</td>
+            <td>-90° (downward)</td>
+            <td>Overhead perspective for spatial movements</td>
+        </tr>
+    </table>
+    
+    <h3>3D Pose Estimation Pipeline</h3>
+    <table border="1">
+        <tr>
+            <th>Stage</th>
+            <th>Process</th>
+            <th>Output</th>
+            <th>Quality Metric</th>
+        </tr>
+        <tr>
+            <td>Calibration</td>
+            <td>Camera parameter estimation</td>
+            <td>Intrinsic/Extrinsic matrices</td>
+            <td>Reprojection error &lt;1 pixel</td>
+        </tr>
+        <tr>
+            <td>Synchronization</td>
+            <td>Temporal alignment</td>
+            <td>Synchronized frames</td>
+            <td>Drift &lt;0.5 frames</td>
+        </tr>
+        <tr>
+            <td>2D Pose Detection</td>
+            <td>Pose estimation per view</td>
+            <td>2D keypoints (body + hands)</td>
+            <td>Confidence &gt;0.8</td>
+        </tr>
+        <tr>
+            <td>Triangulation</td>
+            <td>3D pose estimation from multiple views</td>
+            <td>3D joint positions</td>
+            <td>Cross-view consistency &gt;95%</td>
+        </tr>
+        <tr>
+            <td>Temporal Smoothing</td>
+            <td>Filtering and interpolation</td>
+            <td>Smooth 3D trajectories</td>
+            <td>Jitter &lt;5mm between frames</td>
+        </tr>
+        <tr>
+            <td>Validation</td>
+            <td>Multi-view consistency check</td>
+            <td>Pose quality score</td>
+            <td>Reprojection error &lt;10 pixels</td>
+        </tr>
+    </table>
+    
+    <h3>Pose Estimation Specifications</h3>
+    <ul>
+        <li>Body keypoints: 25 (COCO format) or 33 (MediaPipe)</li>
+        <li>Hand keypoints: 21 per hand (42 total)</li>
+        <li>Face landmarks: 468 points</li>
+        <li>Total tracked points: 536 per frame</li>
+        <li>Output format: JSON with 3D coordinates and confidence scores</li>
+    </ul>
+    
+    <hr>
+    
+    <h2 id="structure">Data Structure & Format</h2>
+    
+    <h3>File Naming Convention</h3>
+    <pre>[LANGUAGE]_[CATEGORY]_[SIGN_ID]_[SIGNER_ID]_[VARIANT].[EXTENSION]</pre>
+    
+    <p>Examples:</p>
+    <ul>
+        <li>KSL_WORD_HELLO_S001_V1.mp4</li>
+        <li>KSL_PHRASE_HOWAREYOU_S025_V2.bvhx</li>
+        <li>KSL_EMOTION_HAPPY_S150_V1.json</li>
+    </ul>
+    
+    <h3>Directory Structure</h3>
+    <pre>
 SignvrseDataset_v1.0/
 ├── videos/
 │   ├── professional/
 │   ├── academic/
-│   └── media/
+│   ├── media/
+│   └── online/
 ├── motion_data/
 │   ├── bvhx_files/
 │   ├── facial_data/
@@ -449,10 +280,35 @@ SignvrseDataset_v1.0/
     ├── specifications/
     ├── guidelines/
     └── changelog/
-            </pre>
-            
-            <h3>Pose Data Structure</h3>
-            <pre><code>{
+    </pre>
+    
+    <h3>BVHX Enhanced Format</h3>
+    <p><strong>Standard BVHX Components:</strong></p>
+    <ul>
+        <li>Joint hierarchy and bone structure</li>
+        <li>Frame-by-frame rotation data</li>
+        <li>Root motion and translation</li>
+    </ul>
+    
+    <p><strong>Signvrse Enhancements:</strong></p>
+    <ul>
+        <li>Embedded facial landmark data (468 points)</li>
+        <li>Expression classification metadata</li>
+        <li>3D pose estimation data:
+            <ul>
+                <li>3D joint positions (x, y, z coordinates)</li>
+                <li>Per-joint confidence scores</li>
+                <li>Visibility flags from each camera view</li>
+                <li>Multi-view aggregated confidence</li>
+            </ul>
+        </li>
+        <li>Quality confidence scores</li>
+        <li>Temporal alignment markers</li>
+    </ul>
+    
+    <h3>Pose Data Structure Example</h3>
+    <pre>
+{
   "frame_id": 1234,
   "timestamp": 1625097600.123,
   "pose_3d": {
@@ -468,218 +324,291 @@ SignvrseDataset_v1.0/
     "cam_0": {"visible_joints": 45, "avg_confidence": 0.92},
     "cam_1": {"visible_joints": 43, "avg_confidence": 0.89}
   }
-}</code></pre>
-        </section>
-        
-        <section id="collection">
-            <h2>Data Collection Protocols</h2>
-            
-            <h3>Professional Studio Recording</h3>
-            <div class="highlight">
-                <h4>Multiview Equipment Requirements:</h4>
-                <ul>
-                    <li>Minimum 6 synchronized 4K cameras (preferred 8 cameras)</li>
-                    <li>Global shutter sensors to prevent rolling shutter artifacts</li>
-                    <li>Hardware genlock or software synchronization</li>
-                    <li>Minimum 4m × 4m × 3m capture space</li>
-                    <li>6-8 LED panel lights for uniform illumination</li>
-                </ul>
-            </div>
-            
-            <h3>Recording Protocol</h3>
-            <ol>
-                <li><strong>Pre-Recording Setup (30 minutes):</strong>
+}
+    </pre>
+    
+    <hr>
+    
+    <h2 id="collection">Data Collection Protocols</h2>
+    
+    <h3>Professional Studio Recording</h3>
+    
+    <h4>Multiview Equipment Requirements:</h4>
+    <ol>
+        <li><strong>Camera System:</strong>
+            <ul>
+                <li>Minimum 6 synchronized 4K cameras (preferred 8 cameras)</li>
+                <li>Matching camera models for color consistency</li>
+                <li>Global shutter sensors to prevent rolling shutter artifacts</li>
+                <li>Minimum 30fps, synchronized to ±0.5 frames</li>
+                <li>SDI or ethernet connectivity for reliable synchronization</li>
+            </ul>
+        </li>
+        <li><strong>Capture Volume Setup:</strong>
+            <ul>
+                <li>Minimum 4m × 4m × 3m capture space</li>
+                <li>Camera mounting: Professional tripods or ceiling rigs</li>
+                <li>Calibration board (checkerboard pattern, minimum 1m × 1m)</li>
+                <li>Reference markers for spatial calibration</li>
+            </ul>
+        </li>
+        <li><strong>Synchronization System:</strong>
+            <ul>
+                <li>Hardware genlock generator or</li>
+                <li>Software synchronization with sub-frame accuracy</li>
+                <li>Centralized recording system with RAID storage</li>
+                <li>Real-time preview monitoring for all camera angles</li>
+            </ul>
+        </li>
+        <li><strong>Lighting Array:</strong>
+            <ul>
+                <li>6-8 LED panel lights (minimum 300W equivalent each)</li>
+                <li>Softboxes or diffusion to prevent harsh shadows</li>
+                <li>Consistent illumination across capture volume</li>
+                <li>No flickering (use lights with >1000Hz PWM or constant current)</li>
+            </ul>
+        </li>
+    </ol>
+    
+    <h4>Multiview Recording Protocol:</h4>
+    <ol>
+        <li><strong>Pre-Recording Setup (30 minutes):</strong>
+            <ul>
+                <li>Camera calibration using checkerboard pattern</li>
+                <li>Intrinsic calibration: lens distortion, focal length</li>
+                <li>Extrinsic calibration: camera positions and orientations</li>
+                <li>Color calibration across all cameras</li>
+                <li>Synchronization verification with clap test</li>
+            </ul>
+        </li>
+        <li><strong>Signer Preparation (15 minutes):</strong>
+            <ul>
+                <li>Position signer at capture volume center</li>
+                <li>Verify visibility from all camera angles</li>
+                <li>Check for occlusions in signing space</li>
+                <li>Facial landmark detection test</li>
+                <li>Practice signs with real-time multiview preview</li>
+            </ul>
+        </li>
+        <li><strong>Recording Process:</strong>
+            <ul>
+                <li>Simultaneous recording start across all cameras</li>
+                <li>Real-time monitoring of all views</li>
+                <li>Automatic quality checks for:
                     <ul>
-                        <li>Camera calibration using checkerboard pattern</li>
-                        <li>Intrinsic and extrinsic calibration</li>
-                        <li>Color calibration across all cameras</li>
-                        <li>Synchronization verification</li>
+                        <li>Frame drops or synchronization drift</li>
+                        <li>Exposure consistency</li>
+                        <li>Focus accuracy on hands and face</li>
                     </ul>
                 </li>
-                <li><strong>Signer Preparation (15 minutes):</strong>
-                    <ul>
-                        <li>Position at capture volume center</li>
-                        <li>Verify visibility from all angles</li>
-                        <li>Check for occlusions</li>
-                        <li>Practice with real-time preview</li>
-                    </ul>
-                </li>
-                <li><strong>Recording Process:</strong>
-                    <ul>
-                        <li>Simultaneous recording across all cameras</li>
-                        <li>Real-time monitoring of all views</li>
-                        <li>Automatic quality checks</li>
-                        <li>Minimum 3 takes per sign</li>
-                    </ul>
-                </li>
-            </ol>
-        </section>
-        
-        <section id="quality">
-            <h2>Quality Assurance Standards</h2>
-            
-            <h3>Acceptance Criteria</h3>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Quality Metric</th>
-                        <th>Threshold</th>
-                        <th>Measurement Method</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Video Resolution</td>
-                        <td>≥1080p</td>
-                        <td>Automated analysis</td>
-                    </tr>
-                    <tr>
-                        <td>Frame Rate</td>
-                        <td>≥30fps</td>
-                        <td>Technical validation</td>
-                    </tr>
-                    <tr>
-                        <td>Pose Detection Confidence</td>
-                        <td>≥0.8 per view</td>
-                        <td>AI verification</td>
-                    </tr>
-                    <tr>
-                        <td>3D Consistency</td>
-                        <td>&lt;20mm variance</td>
-                        <td>Multi-view triangulation</td>
-                    </tr>
-                    <tr>
-                        <td>Joint Visibility</td>
-                        <td>≥80% in 2+ cameras</td>
-                        <td>Coverage analysis</td>
-                    </tr>
-                </tbody>
-            </table>
-            
-            <h3>Multiview Coverage Metrics</h3>
+                <li>Minimum 3 takes per sign from all angles</li>
+            </ul>
+        </li>
+        <li><strong>Post-Recording Verification:</strong>
+            <ul>
+                <li>Synchronization validation across views</li>
+                <li>3D pose estimation test using sample frames</li>
+                <li>Facial expression clarity check</li>
+                <li>Hand visibility verification from all angles</li>
+            </ul>
+        </li>
+        <li><strong>Data Management:</strong>
+            <ul>
+                <li>Raw footage backup (all camera angles)</li>
+                <li>Synchronized video package creation</li>
+                <li>Camera calibration data storage</li>
+                <li>Metadata generation with camera parameters</li>
+            </ul>
+        </li>
+    </ol>
+    
+    <hr>
+    
+    <h2 id="quality">Quality Assurance Standards</h2>
+    
+    <h3>Acceptance Criteria</h3>
+    <table border="1">
+        <tr>
+            <th>Quality Metric</th>
+            <th>Threshold</th>
+            <th>Measurement Method</th>
+        </tr>
+        <tr>
+            <td>Video Resolution</td>
+            <td>≥1080p</td>
+            <td>Automated analysis</td>
+        </tr>
+        <tr>
+            <td>Frame Rate</td>
+            <td>≥30fps</td>
+            <td>Technical validation</td>
+        </tr>
+        <tr>
+            <td>Landmark Accuracy</td>
+            <td>≥95%</td>
+            <td>Manual + AI verification</td>
+        </tr>
+        <tr>
+            <td>Motion Smoothness</td>
+            <td>≥95%</td>
+            <td>Temporal consistency check</td>
+        </tr>
+        <tr>
+            <td>Expression Recognition</td>
+            <td>≥90%</td>
+            <td>Deaf community validation</td>
+        </tr>
+        <tr>
+            <td>Audio Sync</td>
+            <td>±1 frame</td>
+            <td>Cross-correlation analysis</td>
+        </tr>
+    </table>
+    
+    <h3>Multiview Pose Estimation Metrics</h3>
+    <ol>
+        <li><strong>Coverage Metrics:</strong>
             <ul>
                 <li>Minimum 80% of joints visible in at least 2 cameras</li>
                 <li>Critical joints (hands, face) visible in 3+ cameras</li>
                 <li>No single-camera blind spots for >3 consecutive frames</li>
+            </ul>
+        </li>
+        <li><strong>Accuracy Metrics:</strong>
+            <ul>
+                <li>2D pose detection confidence >0.8 per view</li>
+                <li>3D triangulation consistency <20mm variance</li>
+                <li>Temporal smoothness: <10mm jitter between frames</li>
                 <li>Cross-view agreement >90% for visible joints</li>
             </ul>
-        </section>
-        
-        <section id="access">
-            <h2>Distribution & Access</h2>
-            
-            <h3>Dataset Versions</h3>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Tier</th>
-                        <th>Content</th>
-                        <th>Use Case</th>
-                        <th>Price</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Community</td>
-                        <td>1,000 signs</td>
-                        <td>Educational/Personal</td>
-                        <td>Free</td>
-                    </tr>
-                    <tr>
-                        <td>Research</td>
-                        <td>5,000 signs</td>
-                        <td>Academic Research</td>
-                        <td>$500</td>
-                    </tr>
-                    <tr>
-                        <td>Professional</td>
-                        <td>15,000 signs</td>
-                        <td>Commercial Development</td>
-                        <td>$5,000</td>
-                    </tr>
-                    <tr>
-                        <td>Enterprise</td>
-                        <td>20,000+ signs</td>
-                        <td>Large-scale Applications</td>
-                        <td>$25,000</td>
-                    </tr>
-                </tbody>
-            </table>
-            
-            <div style="margin-top: 2rem;">
-                <a href="#" class="download-btn">Request Access</a>
-                <a href="#" class="download-btn">View Sample Data</a>
-                <a href="#" class="download-btn">Documentation PDF</a>
-            </div>
-        </section>
-        
-        <section id="contact">
-            <h2>Contact Information</h2>
-            
-            <div class="feature-grid">
-                <div class="feature-card">
-                    <h4>Dataset Team</h4>
-                    <p>Email: <a href="mailto:dataset@signvrse.ai">dataset@signvrse.ai</a></p>
-                    <p>Support: <a href="mailto:support@signvrse.ai">support@signvrse.ai</a></p>
-                </div>
-                <div class="feature-card">
-                    <h4>Resources</h4>
-                    <p>Documentation: <a href="https://docs.signvrse.ai/dataset">docs.signvrse.ai/dataset</a></p>
-                    <p>Community: <a href="https://community.signvrse.ai">community.signvrse.ai</a></p>
-                </div>
-                <div class="feature-card">
-                    <h4>Version Control</h4>
-                    <p>Current Version: 1.0</p>
-                    <p>Release Date: July 2025</p>
-                    <p>GitHub: <a href="https://github.com/signvrse/dataset-specs">github.com/signvrse/dataset-specs</a></p>
-                </div>
-            </div>
-        </section>
-    </main>
+        </li>
+        <li><strong>Validation Process:</strong>
+            <ul>
+                <li>Automatic 2D pose detection on each view</li>
+                <li>Multi-view triangulation for 3D positions</li>
+                <li>Consistency check across different camera pairs</li>
+                <li>Manual verification of challenging signs</li>
+            </ul>
+        </li>
+    </ol>
     
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Signvrse. Motion-S Dataset v1.0</p>
-            <p>Building accessible technology for the Deaf community</p>
-        </div>
-    </footer>
+    <h3>Quality Assurance for Multiview</h3>
+    <ul>
+        <li>Minimum 2 cameras must have clear view of hands at all times</li>
+        <li>Face must be visible in at least 1 camera throughout signing</li>
+        <li>No camera should have >20% occlusion of critical features</li>
+        <li>3D pose estimation accuracy: <2cm error for hand positions</li>
+    </ul>
     
-    <script>
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('nav a').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-        
-        // Highlight active section in navigation
-        window.addEventListener('scroll', () => {
-            const sections = document.querySelectorAll('section');
-            const navLinks = document.querySelectorAll('nav a');
-            
-            let current = '';
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop;
-                const sectionHeight = section.clientHeight;
-                if (pageYOffset >= (sectionTop - 200)) {
-                    current = section.getAttribute('id');
-                }
-            });
-            
-            navLinks.forEach(link => {
-                link.style.backgroundColor = '';
-                if (link.getAttribute('href').slice(1) === current) {
-                    link.style.backgroundColor = '#0f3460';
-                }
-            });
-        });
-    </script>
+    <hr>
+    
+    <h2 id="access">Distribution & Access</h2>
+    
+    <h3>Dataset Versions</h3>
+    <ul>
+        <li>Research License: Academic and research use</li>
+        <li>Commercial License: Business applications</li>
+        <li>Open Source Subset: 5,000 signs for community use</li>
+        <li>Premium Full Dataset: Complete 20,000+ signs</li>
+    </ul>
+    
+    <h3>Access Tiers</h3>
+    <table border="1">
+        <tr>
+            <th>Tier</th>
+            <th>Content</th>
+            <th>Use Case</th>
+            <th>Price</th>
+        </tr>
+        <tr>
+            <td>Community</td>
+            <td>1,000 signs</td>
+            <td>Educational/Personal</td>
+            <td>Free</td>
+        </tr>
+        <tr>
+            <td>Research</td>
+            <td>5,000 signs</td>
+            <td>Academic Research</td>
+            <td>$500</td>
+        </tr>
+        <tr>
+            <td>Professional</td>
+            <td>15,000 signs</td>
+            <td>Commercial Development</td>
+            <td>$5,000</td>
+        </tr>
+        <tr>
+            <td>Enterprise</td>
+            <td>20,000+ signs</td>
+            <td>Large-scale Applications</td>
+            <td>$25,000</td>
+        </tr>
+    </table>
+    
+    <h3>Supported Pose Estimation Frameworks</h3>
+    <table border="1">
+        <tr>
+            <th>Framework</th>
+            <th>Body Model</th>
+            <th>Hand Model</th>
+            <th>Face Model</th>
+            <th>Integration Status</th>
+        </tr>
+        <tr>
+            <td>MediaPipe</td>
+            <td>BlazePose (33 points)</td>
+            <td>Hand (21 points)</td>
+            <td>FaceMesh (468 points)</td>
+            <td>Fully integrated</td>
+        </tr>
+        <tr>
+            <td>OpenPose</td>
+            <td>COCO (25 points)</td>
+            <td>Hand (21 points)</td>
+            <td>Face (70 points)</td>
+            <td>Supported</td>
+        </tr>
+        <tr>
+            <td>MMPose</td>
+            <td>Multiple models</td>
+            <td>Multiple models</td>
+            <td>-</td>
+            <td>Planned v1.5</td>
+        </tr>
+        <tr>
+            <td>Custom KSL Model</td>
+            <td>33 + sign-specific</td>
+            <td>21 + finger details</td>
+            <td>468 + expressions</td>
+            <td>In development</td>
+        </tr>
+    </table>
+    
+    <hr>
+    
+    <h2 id="contact">Contact Information</h2>
+    
+    <h3>Dataset Team</h3>
+    <ul>
+        <li>Email: <a href="mailto:dataset@signvrse.ai">dataset@signvrse.ai</a></li>
+        <li>Documentation: <a href="https://docs.signvrse.ai/dataset">docs.signvrse.ai/dataset</a></li>
+        <li>Support: <a href="mailto:support@signvrse.ai">support@signvrse.ai</a></li>
+        <li>Community: <a href="https://community.signvrse.ai">community.signvrse.ai</a></li>
+    </ul>
+    
+    <h3>Version Control</h3>
+    <ul>
+        <li>Current Version: 1.0</li>
+        <li>Release Date: July 2025</li>
+        <li>Next Review: October 2025</li>
+        <li>GitHub: <a href="https://github.com/signvrse/dataset-specs">github.com/signvrse/dataset-specs</a></li>
+    </ul>
+    
+    <hr>
+    
+    <p><em>This document is a living specification and will be updated as the dataset evolves. Please check for the latest version before implementation.</em></p>
+    
+    <p>&copy; 2025 Signvrse. Motion-S Dataset v1.0. Building accessible technology for the Deaf community.</p>
 </body>
 </html>
