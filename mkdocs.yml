@@ -1,0 +1,208 @@
+site_name: Motion-S Manual
+site_description: Documentation for Motion-S Signvrse Sign Language Dataset
+site_author: Signvrse
+site_url: https://signvrse.github.io/motion-s-spec/
+
+# Repository information
+repo_name: signvrse/motion-s-spec
+repo_url: https://github.com/signvrse/motion-s-spec
+edit_uri: edit/main/docs/
+
+# Navigation structure
+nav:
+  - Home: index.md
+  - Getting Started:
+    - Overview: README.md
+    - Quick Start Guide: quick-start.md
+  - Technical Documentation:
+    - Technical Specifications: technical-specs.md
+    - Data Structure & Format: data-structure.md
+    - Quality Assurance: quality-assurance.md
+  - Content & Coverage:
+    - Content Specifications: content-specifications.md
+    - Sign Language Coverage: sign-coverage.md
+    - Demographics & Representation: demographics.md
+  - Operations:
+    - Studio Operations Guide: studio-operations.md
+    - Recording Protocols: recording-protocols.md
+    - Equipment Setup: equipment-setup.md
+  - Legal & Ethics:
+    - Privacy & Ethics: privacy-ethics.md
+    - Distribution & Licensing: distribution-licensing.md
+    - Community Guidelines: community-guidelines.md
+  - Development:
+    - Roadmap: roadmap.md
+    - API Documentation: api-docs.md
+    - Integration Guide: integration-guide.md
+  - Resources:
+    - FAQ: faq.md
+    - Troubleshooting: troubleshooting.md
+    - Glossary: glossary.md
+    - Contact: contact.md
+
+# Theme configuration
+theme:
+  name: material
+  
+  # Theme features
+  features:
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.expand
+    - navigation.path
+    - navigation.indexes
+    - toc.follow
+    - toc.integrate
+    - search.suggest
+    - search.highlight
+    - search.share
+    - header.autohide
+    - content.action.edit
+    - content.action.view
+    - content.code.copy
+    - content.code.annotate
+    - content.tooltips
+    - announce.dismiss
+
+  # Color palette
+  palette:
+    # Light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: blue
+      accent: light blue
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    
+    # Dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: blue
+      accent: light blue
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+  # Fonts
+  font:
+    text: Roboto
+    code: Roboto Mono
+
+  # Favicon and logo (optional - remove if files don't exist)
+  # favicon: assets/favicon.png
+  # logo: assets/logo.png
+
+  # Language
+  language: en
+
+# Additional CSS and JavaScript (optional - remove if files don't exist)
+# extra_css:
+#   - stylesheets/extra.css
+#   - stylesheets/custom.css
+
+# extra_javascript:
+#   - javascripts/extra.js
+#   - javascripts/mathjax.js
+#   - https://polyfill.io/v3/polyfill.min.js?features=es6
+#   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+# Extensions
+markdown_extensions:
+  # Python Markdown
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - toc:
+      permalink: true
+      toc_depth: 3
+
+  # Python Markdown Extensions
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.emoji:
+      # emoji_index: !!python/name:material.extensions.emoji.twemoji
+      # emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.magiclink:
+      repo_url_shorthand: true
+      user: signvrse
+      repo: motion-s-spec
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          # format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+# Plugins (simplified for basic setup)
+plugins:
+  - search:
+      separator: '[\s\-,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
+
+# Extra configuration
+extra:
+  # Social links
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/signvrse/motion-s-spec
+      name: GitHub Repository
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/signvrse
+      name: Follow us on Twitter
+    - icon: fontawesome/brands/linkedin
+      link: https://linkedin.com/company/signvrse
+      name: Connect on LinkedIn
+    - icon: fontawesome/solid/envelope
+      link: mailto:dataset@signvrse.com
+      name: Email us
+
+  # Generator notice
+  generator: false
+
+# Copyright
+copyright: >
+  Copyright &copy; 2025 Signvrse
+
+# Optional advanced features (uncomment when ready to use)
+# extra:
+#   consent:
+#     title: Cookie consent
+#     description: >-
+#       We use cookies to recognize your repeated visits and preferences, as well
+#       as to measure the effectiveness of our documentation and whether users
+#       find what they're searching for. With your consent, you're helping us to
+#       make our documentation better.
+#     actions:
+#       - accept
+#       - reject
+#       - manage
+
+# Hooks (uncomment if you have custom scripts)
+# hooks:
+#   - scripts/social_cards.py
+
+# Watch files for development (uncomment if you have these directories)
+# watch:
+#   - includes/
+#   - overrides/
